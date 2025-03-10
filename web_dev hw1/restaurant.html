@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eddy's China Website</title>
+  <link rel="stylesheet" href="restaurant.css">
+</head>
+<body>
+  <!-- Header and Navigation -->
+  <header>
+    <div class="logo">
+      <img src="dumpling_logo.jpg" alt="Restaurant Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger-menu" id="hamburger-menu">
+        <span>&#9776;</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <img src="eddyschina_banner.png" alt="Restaurant Banner">
+  </section>
+
+  <!-- Menu Page -->
+  <section id="menu">
+    <h2>Menu</h2>
+    <div class="menu-items">
+      <div class="menu-card">
+        <h3>Beef Fried Rice</h3>
+        <p>fried rice with beef</p>
+        <p>$9.00</p>
+      </div>
+      <div class="menu-card">
+        <h3>Beef and Broccoli</h3>
+        <p>stir fried beef and broccoli with special sauce</p>
+        <p>$11.00</p>
+      </div>
+      <div class="menu-card">
+        <h3>Char siu over rice</h3>
+        <p>Chinese BBQ pork over rice with vegetables</p>
+        <p>$8.25</p>
+      </div>
+      <div class="menu-card">
+        <h3>Roast duck over rice</h3>
+        <p>Roast duck over rice with vegetables</p>
+        <p>$8.50</p>
+      </div>
+      <div class="menu-card">
+        <h3>Steamed fish</h3>
+        <p>Cantonese style steamed fish</p>
+        <p>$11.00</p>
+      </div>
+      <div class="menu-card">
+        <h3>Egg rolls</h3>
+        <p>Crispy roll filled with vegetable and pork</p>
+        <p>$4.00</p>
+      </div>
+      <!-- Repeat for other dishes -->
+    </div>
+  </section>
+
+  <!-- Image Gallery -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="slider-container">
+      <div class="slider">
+        <img src="beef_and_broccoli.jpg" alt="Beef and Broccoli">
+        <img src="beef_fried_rice.jpg" alt="Beef Fried Rice">
+        <img src="egg_rolls.jpg" alt="Egg Rolls">
+        <img src="charsiu_rice.jpg" alt="Charsiu rice">
+        <img src="roastduck_rice.jpg" alt="Roast duck over rice">
+        <img src="steamed_cod.jpg" alt="Steamed fish">
+        <img src="eddyschina_inside.jpg" alt="Interior">
+      </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Eddy's China is a new and upcoming chinese cuisine 
+    restaurant founded by Edmond Lei. Although he has never been to his homeland, China, 
+    he always loved chinese food. With perfected recipes passed down by his family 
+    and his love for food, he looks to serve everyone who comes to Eddy's China to have a taste of chinese food.</p>
+  </section>
+
+  <!-- Contact Page -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div id="google-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.735596139715!2d-73.96710402397149!3d40.76783977138532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258eb899f0889%3A0xb5e90aa7d877ee1f!2sHunter%20College!5e0!3m2!1sen!2sus!4v1741640562654!5m2!1sen!2sus" 
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="social-media">
+      <a href="https://www.facebook.com">Facebook</a>
+      <a href="https://www.instagram.com">Instagram</a>
+    </div>
+    <div class="business-hours">
+      <p>Business Hours: 9 AM - 9 PM</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
