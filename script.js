@@ -15,47 +15,47 @@ navItems.forEach(item => {
 
 // Shopping cart logic
 let cart = [];
-let cartCount = document.getElementById('cart-count');
-let cartContainer = document.getElementById('cart-container');
-let cartItemsContainer = document.getElementById('cart');
-let totalElement = document.getElementById('total');
+let total = 0;
 
-// Toggle Cart visibility
+function addToCart(itemName, price) {
+  cart.push({ name: itemName, price });
+  updateCartDisplay();
+}
+
+function updateCartDisplay() {
+  const cartDiv = document.getElementById('cart');
+  const totalP = document.getElementById('total');
+  const cartCount = document.getElementById('cart-count');
+
+  cartDiv.innerHTML = '';
+  total = 0;
+
+  cart.forEach((item, index) => {
+    const itemDiv = document.createElement('div');
+    itemDiv.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+    cartDiv.appendChild(itemDiv);
+    total += item.price;
+  });
+
+  totalP.textContent = `Total: $${total.toFixed(2)}`;
+  cartCount.textContent = cart.length;
+}
+
 function toggleCart() {
-    cartContainer.classList.toggle('hidden');
-    renderCart();
+  const cartContainer = document.getElementById('cart-container');
+  cartContainer.classList.toggle('hidden');
 }
 
-// Add item to cart
-function addToCart(name, price) {
-    cart.push({ name, price });
-    renderCart();
-}
-
-// Render Cart
-function renderCart() {
-    cartItemsContainer.innerHTML = '';
-    let total = 0;
-    cart.forEach(item => {
-        let itemElement = document.createElement('div');
-        itemElement.textContent = `${item.name} - $${item.price.toFixed(2)}`;
-        cartItemsContainer.appendChild(itemElement);
-        total += item.price;
-    });
-    totalElement.textContent = `Total: $${total.toFixed(2)}`;
-    cartCount.textContent = cart.length;
-}
-
-// Clear Cart
-function clearCart() {
-    cart = [];
-    renderCart();
-}
-
-// Close cart
+// Close cart when clicking on close button
 const closeCartButton = document.getElementById('close-cart');
 if (closeCartButton) {
-    closeCartButton.addEventListener('click', () => {
-        cartContainer.classList.add('hidden');
-    });
+  closeCartButton.addEventListener('click', () => {
+    const cartContainer = document.getElementById('cart-container');
+    cartContainer.classList.add('hidden'); // Hide the cart
+  });
+}
+
+function clearCart() {
+  cart = [];
+  updateCartDisplay();
 }
