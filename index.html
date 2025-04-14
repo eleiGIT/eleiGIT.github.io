@@ -23,7 +23,17 @@
         <span>&#9776;</span>
       </div>
     </nav>
+    <div class="cart-icon" onclick="toggleCart()">
+      🛒 Cart (<span id="cart-count">0</span>)
+    </div>
   </header>
+
+  <div id="cart-container" class="cart-popup hidden">
+    <h3>Your Cart</h3>
+    <div id="cart" class="cart-items"></div>
+    <p id="total">Total: $0.00</p>
+    <button onclick="clearCart()">Clear Cart</button>
+  </div>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
@@ -71,13 +81,6 @@
         <button onclick="addToCart('Egg rolls', 4.00)">Add to Cart</button>
       </div>
     </div>
-  
-    <!-- Shopping Cart Section -->
-    <h2>Your Cart</h2>
-    <div id="cart" class="cart-container"></div>
-    <p id="total">Total: $0.00</p>
-    <button onclick="clearCart()">Clear Cart</button>
-  </section>
 
   <!-- Image Gallery -->
   <section id="gallery">

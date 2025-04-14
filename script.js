@@ -13,49 +13,48 @@ navItems.forEach(item => {
   });
 });
 
-let cart = {};
+let cart = [];
 
-function addToCart(itemName, itemPrice) {
-  if (cart[itemName]) {
-    cart[itemName].quantity += 1;
+function addToCart(name, price) {
+  const existingItem = cart.find(item => item.name === name);
+  if (existingItem) {
+    existingItem.quantity++;
   } else {
-    cart[itemName] = { price: itemPrice, quantity: 1 };
+    cart.push({ name, price, quantity: 1 });
   }
-  updateCart();
+  updateCartDisplay();
 }
 
-function removeFromCart(itemName) {
-  if (cart[itemName]) {
-    cart[itemName].quantity -= 1;
-    if (cart[itemName].quantity <= 0) {
-      delete cart[itemName];
-    }
-    updateCart();
-  }
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCartDisplay();
 }
 
 function clearCart() {
-  cart = {};
-  updateCart();
+  cart = [];
+  updateCartDisplay();
 }
 
-function updateCart() {
-  const cartDiv = document.getElementById("cart");
-  cartDiv.innerHTML = "";
+function updateCartDisplay() {
+  const cartDiv = document.getElementById('cart');
+  const totalSpan = document.getElementById('total');
+  const cartCount = document.getElementById('cart-count');
+  cartDiv.innerHTML = '';
 
   let total = 0;
-  for (let item in cart) {
-    const { price, quantity } = cart[item];
-    total += price * quantity;
+  cart.forEach((item, index) => {
+    total += item.price * item.quantity;
+    const p = document.createElement('p');
+    p.innerHTML = `${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}
+      <button onclick="removeFromCart(${index})">Remove</button>`;
+    cartDiv.appendChild(p);
+  });
 
-    const itemDiv = document.createElement("div");
-    itemDiv.className = "cart-item";
-    itemDiv.innerHTML = `
-      <span>${item} - $${price.toFixed(2)} x ${quantity}</span>
-      <button onclick="removeFromCart('${item}')">Remove</button>
-    `;
-    cartDiv.appendChild(itemDiv);
-  }
+  cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+  totalSpan.textContent = `Total: $${total.toFixed(2)}`;
+}
 
-  document.getElementById("total").innerText = `Total: $${total.toFixed(2)}`;
+function toggleCart() {
+  const cartPopup = document.getElementById('cart-container');
+  cartPopup.classList.toggle('hidden');
 }
