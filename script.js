@@ -46,15 +46,6 @@ function toggleCart() {
   cartContainer.classList.toggle('hidden');
 }
 
-// Close cart when clicking on close button
-const closeCartButton = document.getElementById('close-cart');
-if (closeCartButton) {
-  closeCartButton.addEventListener('click', () => {
-    const cartContainer = document.getElementById('cart-container');
-    cartContainer.classList.add('hidden'); // Hide the cart
-  });
-}
-
 function clearCart() {
   cart = [];
   updateCartDisplay();

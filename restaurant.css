@@ -130,88 +130,89 @@ footer .business-hours {
   margin-top: 10px;
 }
 
-/* Cart Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Shopping Cart Styles */
 #cart-container {
-  position: fixed;
-  top: 70px;
-  right: 20px;
-  background-color: #222;
-  border: 1px solid #555;
-  padding: 15px;
-  border-radius: 8px;
-  width: 250px;
-  z-index: 1000;
-  display: none;
-  color: white;
+position: fixed;
+top: 70px;
+right: 20px;
+background-color: #222;
+border: 1px solid #555;
+padding: 15px;
+border-radius: 8px;
+width: 250px;
+z-index: 1000;
+display: none;
+color: white;
 }
 
 #cart-container.hidden {
-  display: none;
+display: none;
 }
 
-.close-cart-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  color: rgb(255, 255, 255);
-  font-size: 1.5em;
-  cursor: pointer;
-  z-index: 1001;
+#cart-button {
+position: fixed;
+top: 20px;
+right: 20px;
+background-color: #444;
+color: white;
+border: none;
+padding: 10px 15px;
+cursor: pointer;
+z-index: 1001;
+border-radius: 5px;
 }
 
-.close-cart-button:hover {
-  color: #ff0000;
+#cart-button:hover {
+background-color: #666;
 }
 
-/* Styling for cart container */
-.cart-popup {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: white;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Makes sure it's on top of other elements */
-  width: 300px;
-  display: none; /* Hidden by default */
+#cart {
+max-height: 200px;
+overflow-y: auto;
+margin-bottom: 10px;
 }
 
-/* Add a class for when the cart is shown */
-.cart-popup.hidden {
-  display: none;
+#total {
+font-weight: bold;
+margin-bottom: 10px;
 }
 
-/* Cart Header styles with close button */
-.cart-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative; /* Ensure close button is positioned relative to this container */
+#clear-cart {
+background-color: #aa3333;
+color: white;
+border: none;
+padding: 5px 10px;
+cursor: pointer;
+border-radius: 5px;
 }
 
-.close-btn {
-  background: none;
-  border: none;
-  color: #333;
-  font-size: 1.5em;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 5px;
-}
-
-/* Hover effect for close button */
-.close-btn:hover {
-  color: red;
-}
-
-/* Optional: Style for cart items and other elements */
-.cart-items {
-  margin-top: 10px;
-  max-height: 200px;
-  overflow-y: auto;
+#clear-cart:hover {
+background-color: #cc4444;
 }

@@ -29,16 +29,12 @@
   </header>
 
   <!-- Floating Cart -->
-<div id="cart-container" class="cart-popup hidden">
-  <div class="cart-header">
+  <div id="cart-container" class="cart-popup hidden">
     <h3>Your Cart</h3>
-    <!-- Close button inside the cart -->
-    <button id="close-cart" class="close-btn">✕</button>
+    <div id="cart" class="cart-items"></div>
+    <p id="total">Total: $0.00</p>
+    <button onclick="clearCart()">Clear Cart</button>
   </div>
-  <div id="cart" class="cart-items"></div>
-  <p id="total">Total: $0.00</p>
-  <button onclick="clearCart()">Clear Cart</button>
-</div>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
