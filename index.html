@@ -30,10 +30,13 @@
 
   <!-- Floating Cart -->
   <div id="cart-container" class="cart-popup hidden">
-    <h3>Your Cart</h3>
-    <div id="cart" class="cart-items"></div>
-    <p id="total">Total: $0.00</p>
-    <button onclick="clearCart()">Clear Cart</button>
+    <button id="close-cart" class="close-btn">✖</button>
+    <div class="cart-content">
+      <h3>Your Cart</h3>
+      <div id="cart" class="cart-items"></div>
+      <p id="total">Total: $0.00</p>
+      <button onclick="clearCart()">Clear Cart</button>
+    </div>
   </div>
 
   <!-- Hero Section -->
