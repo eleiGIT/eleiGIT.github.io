@@ -14,6 +14,7 @@ navItems.forEach(item => {
 });
 
 // Shopping cart logic
+
 let cart = [];
 let total = 0;
 
@@ -46,6 +47,16 @@ function toggleCart() {
   cartContainer.classList.toggle('hidden');
 }
 
+// Close the cart when clicking the "Close" button (✕)
+const closeCartButton = document.getElementById('close-cart');
+if (closeCartButton) {
+  closeCartButton.addEventListener('click', () => {
+    const cartContainer = document.getElementById('cart-container');
+    cartContainer.classList.add('hidden'); // Hide the cart
+  });
+}
+
+// Clear cart logic
 function clearCart() {
   cart = [];
   updateCartDisplay();
