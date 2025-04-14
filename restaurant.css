@@ -17,11 +17,7 @@ header {
   background-color: #333;
 }
 
-header .logo {
-  flex: 1;
-}
-
-header nav ul {
+nav ul {
   list-style-type: none;
   display: flex;
   gap: 20px;
@@ -29,11 +25,11 @@ header nav ul {
   padding: 0;
 }
 
-header nav ul li {
+nav ul li {
   display: inline-block;
 }
 
-header nav ul li a {
+nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 1.2em;
@@ -42,13 +38,6 @@ header nav ul li a {
 .hamburger-menu {
   display: none;
   cursor: pointer;
-}
-
-.cart-icon {
-  cursor: pointer;
-  font-size: 1.5em;
-  color: white;
-  z-index: 1001; /* Ensure cart icon is clickable */
 }
 
 .hero {
@@ -170,60 +159,60 @@ footer .business-hours {
 
 /* Shopping Cart Styles */
 #cart-container {
-  position: fixed;
-  top: 70px;
-  right: 20px;
-  background-color: #222;
-  border: 1px solid #555;
-  padding: 15px;
-  border-radius: 8px;
-  width: 250px;
-  z-index: 1000;
-  display: none;
-  color: white;
+position: fixed;
+top: 70px;
+right: 20px;
+background-color: #222;
+border: 1px solid #555;
+padding: 15px;
+border-radius: 8px;
+width: 250px;
+z-index: 1000;
+display: none;
+color: white;
 }
 
 #cart-container.hidden {
-  display: none;
+display: none;
 }
 
 #cart-button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #444;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 1002; /* Ensure cart button is above the cart */
-  border-radius: 5px;
+position: fixed;
+top: 20px;
+right: 20px;
+background-color: #444;
+color: white;
+border: none;
+padding: 10px 15px;
+cursor: pointer;
+z-index: 1001;
+border-radius: 5px;
 }
 
 #cart-button:hover {
-  background-color: #666;
+background-color: #666;
 }
 
 #cart {
-  max-height: 200px;
-  overflow-y: auto;
-  margin-bottom: 10px;
+max-height: 200px;
+overflow-y: auto;
+margin-bottom: 10px;
 }
 
 #total {
-  font-weight: bold;
-  margin-bottom: 10px;
+font-weight: bold;
+margin-bottom: 10px;
 }
 
 #clear-cart {
-  background-color: #aa3333;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 5px;
+background-color: #aa3333;
+color: white;
+border: none;
+padding: 5px 10px;
+cursor: pointer;
+border-radius: 5px;
 }
 
 #clear-cart:hover {
-  background-color: #cc4444;
+background-color: #cc4444;
 }
