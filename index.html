@@ -38,34 +38,45 @@
         <h3>Beef Fried Rice</h3>
         <p>fried rice with beef</p>
         <p>$9.00</p>
+        <button onclick="addToCart('Beef Fried Rice', 9.00)">Add to Cart</button>
       </div>
       <div class="menu-card">
         <h3>Beef and Broccoli</h3>
         <p>stir fried beef and broccoli with special sauce</p>
         <p>$11.00</p>
+        <button onclick="addToCart('Beef and Broccoli', 11.00)">Add to Cart</button>
       </div>
       <div class="menu-card">
         <h3>Char siu over rice</h3>
         <p>Chinese BBQ pork over rice with vegetables</p>
         <p>$8.25</p>
+        <button onclick="addToCart('Char siu over rice', 8.25)">Add to Cart</button>
       </div>
       <div class="menu-card">
         <h3>Roast duck over rice</h3>
         <p>Roast duck over rice with vegetables</p>
         <p>$8.50</p>
+        <button onclick="addToCart('Roast duck over rice', 8.50)">Add to Cart</button>
       </div>
       <div class="menu-card">
         <h3>Steamed fish</h3>
         <p>Cantonese style steamed fish</p>
         <p>$11.00</p>
+        <button onclick="addToCart('Steamed fish', 11.00)">Add to Cart</button>
       </div>
       <div class="menu-card">
         <h3>Egg rolls</h3>
         <p>Crispy roll filled with vegetable and pork</p>
         <p>$4.00</p>
+        <button onclick="addToCart('Egg rolls', 4.00)">Add to Cart</button>
       </div>
-      <!-- Repeat for other dishes -->
     </div>
+  
+    <!-- Shopping Cart Section -->
+    <h2>Your Cart</h2>
+    <div id="cart" class="cart-container"></div>
+    <p id="total">Total: $0.00</p>
+    <button onclick="clearCart()">Clear Cart</button>
   </section>
 
   <!-- Image Gallery -->
