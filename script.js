@@ -13,7 +13,7 @@ navItems.forEach(item => {
   });
 });
 
-// Shopping cart logic
+// Shopping cart
 let cart = [];
 let total = 0;
 
@@ -31,30 +31,16 @@ function updateCartDisplay() {
   total = 0;
 
   cart.forEach((item, index) => {
-    const itemContainer = document.createElement('div');
-    itemContainer.style.display = 'flex';
-    itemContainer.style.justifyContent = 'space-between';
-    itemContainer.style.alignItems = 'center';
-    itemContainer.style.marginBottom = '8px';
+    const itemDiv = document.createElement('div');
+    itemDiv.textContent = `${item.name} - $${item.price.toFixed(2)}`;
 
-    const itemText = document.createElement('span');
-    itemText.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    removeButton.classList.add('remove-item');
+    removeButton.addEventListener('click', () => removeFromCart(index));
 
-    const removeBtn = document.createElement('button');
-    removeBtn.textContent = 'Remove';
-    removeBtn.style.backgroundColor = '#aa3333';
-    removeBtn.style.color = 'white';
-    removeBtn.style.border = 'none';
-    removeBtn.style.padding = '4px 8px';
-    removeBtn.style.cursor = 'pointer';
-    removeBtn.style.borderRadius = '4px';
-    removeBtn.onclick = () => {
-      removeFromCart(index);
-    };
-
-    itemContainer.appendChild(itemText);
-    itemContainer.appendChild(removeBtn);
-    cartDiv.appendChild(itemContainer);
+    itemDiv.appendChild(removeButton);
+    cartDiv.appendChild(itemDiv);
 
     total += item.price;
   });
