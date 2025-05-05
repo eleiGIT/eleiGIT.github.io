@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/eleiGIT.github.io/static/css/main.50fcb167.css",
+    "main.js": "/eleiGIT.github.io/static/js/main.fe6bc617.js",
+    "index.html": "/eleiGIT.github.io/index.html",
+    "main.50fcb167.css.map": "/eleiGIT.github.io/static/css/main.50fcb167.css.map",
+    "main.fe6bc617.js.map": "/eleiGIT.github.io/static/js/main.fe6bc617.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.50fcb167.css",
+    "static/js/main.fe6bc617.js"
+  ]
+}
