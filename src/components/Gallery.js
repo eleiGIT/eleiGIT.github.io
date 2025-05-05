@@ -4,13 +4,13 @@ import '../App.css';
 const Gallery = () => {
   // Array of images for the gallery
   const images = [
-    { src: 'img_hw1/beef_and_broccoli.jpg', alt: 'Beef and Broccoli' },
-    { src: 'img_hw1/beef_fried_rice.jpg', alt: 'Beef Fried Rice' },
-    { src: 'img_hw1/egg_rolls.jpg', alt: 'Egg Rolls' },
-    { src: 'img_hw1/charsiu_rice.jpg', alt: 'Charsiu Rice' },
-    { src: 'img_hw1/roastduck_rice.jpg', alt: 'Roast Duck Over Rice' },
-    { src: 'img_hw1/steamed_cod.jpg', alt: 'Steamed Fish' },
-    { src: 'img_hw1/eddyschina_inside.jpg', alt: 'Interior' }
+    { src: `${process.env.PUBLIC_URL}/img_hw1/beef_and_broccoli.jpg`, alt: 'Beef and Broccoli' },
+    { src: `${process.env.PUBLIC_URL}/img_hw1/beef_fried_rice.jpg`, alt: 'Beef Fried Rice' },
+    { src: `${process.env.PUBLIC_URL}/img_hw1/egg_rolls.jpg`, alt: 'Egg Rolls' },
+    { src: `${process.env.PUBLIC_URL}/img_hw1/charsiu_rice.jpg`, alt: 'Charsiu Rice' },
+    { src: `${process.env.PUBLIC_URL}/img_hw1/roastduck_rice.jpg`, alt: 'Roast Duck Over Rice' },
+    { src: `${process.env.PUBLIC_URL}/img_hw1/steamed_cod.jpg`, alt: 'Steamed Fish' },
+    { src: `${process.env.PUBLIC_URL}/img_hw1/eddyschina_inside.jpg`, alt: 'Interior' }
   ];
 
   const [isDragging, setIsDragging] = useState(false);

@@ -1,11 +1,10 @@
-// Header.js
 import React from 'react';
 
 const Header = ({ cartCount, toggleCart }) => {
   return (
     <header>
       <div className="logo">
-        <img src="/img_hw1/dumpling_logo.jpg" alt="Restaurant Logo" />
+        <img src={`${process.env.PUBLIC_URL}/img_hw1/dumpling_logo.jpg`} alt="Restaurant Logo" />
       </div>
       <nav>
         <ul className="nav-links">
