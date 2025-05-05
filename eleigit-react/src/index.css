@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
