@@ -305,3 +305,27 @@ margin-bottom: 10px;
   font-size: 1.2em;
   cursor: pointer;
 }
+
+#gallery {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slider-container {
+  display: flex;
+  overflow-x: scroll;
+  cursor: grab; /* Change cursor to indicate dragging */
+  gap: 10px;
+}
+
+.slider-image {
+  width: auto;
+  height: auto;
+  flex-shrink: 0; /* Prevent shrinking of images */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider-container:active {
+  cursor: grabbing; /* Change cursor when dragging */
+}
